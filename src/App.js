@@ -1,6 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 
+import PersonList from "./PersonList.jsx"
+import AddPerson from "./AddPerson.jsx"
+import RemovePerson from "./RemovePerson.jsx"
+
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +23,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <PersonList />
+      <AddPerson />
+      <RemovePerson />
     </div>
   );
 }

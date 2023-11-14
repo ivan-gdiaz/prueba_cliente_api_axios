@@ -5,8 +5,16 @@ export default function PersonList() {
     const [persons, setPersons] = useState([]);
 
     useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/users')
-            .then((res) => {
+        axios.get('https://jsonplaceholder.typicode.com/users', 
+            {
+                headers:  {
+                    "Cache-Control": "no-cache",
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Methods": "GET,POST,OPTIONS,DELETE,PUT"
+                }
+            }
+            ).then((res) => {
                 setPersons(res.data);
             },[])
     });

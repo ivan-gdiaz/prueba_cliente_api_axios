@@ -4,28 +4,16 @@ import './App.css';
 import PersonList from "./PersonList.jsx"
 import AddPerson from "./AddPerson.jsx"
 import RemovePerson from "./RemovePerson.jsx"
+import Snackbar from "./Snackbar.jsx"
 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
       <PersonList />
       <AddPerson />
       <RemovePerson />
+      <Snackbar />
     </div>
   );
 }
